@@ -7,5 +7,12 @@
     "action": {
         "default_popup": "popup.html", 
         "default_title": "YouTube summary :D"
-    }
+    },
+    "content_scripts": [
+        {
+            "matches": ["*://*.youtube.com/*"], 
+            "js": ["content.js"], 
+            "run_at": "document_idle"
+        }
+    ]
 }
